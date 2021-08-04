@@ -1,0 +1,348 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;700;900&display=swap');
+
+:root {
+	--white: #fdfdfd;
+	--light-blue: #4d7cce;
+	--blue: #325288;
+	--dark-blue: #223558;
+	--cream: #f4eee8;
+	--orange: #f5cebe;
+	--green: #114e60;
+	--light-green: #3ad86c;
+	--yellow: #d8cd3a;
+	--red: #d83a42;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: 'Rubik', sans-serif;
+	background: var(--white);
+}
+
+h1,
+h2 {
+	font-size: 1.5rem;
+	font-weight: bold;
+	color: var(--green);
+}
+
+input {
+	cursor: text;
+}
+
+.btn,
+a {
+	transition: all 0.2s ease;
+	cursor: pointer;
+}
+
+a {
+	color: var(--light-blue);
+	text-decoration: none;
+}
+
+a:hover {
+	color: var(--dark-blue);
+	text-decoration: none;
+}
+
+.form-control:focus {
+	border-color: var(--light-blue);
+	box-shadow: 0 0 0 0.2rem rgba(50, 82, 136, 0.25);
+}
+
+.card {
+	padding: 1.3rem;
+	border-radius: 5px;
+	color: var(--dark-blue);
+	border: solid 2px var(--green);
+}
+
+/* #### NAVBAR #### */
+.navbar {
+	width: 100%;
+	background: var(--blue);
+}
+
+.navbar-brand h1 {
+	font-size: 1.8rem;
+	color: var(--cream);
+}
+
+/* #### ADD BOOK #### */
+.add-book button {
+	color: var(--white);
+	border-radius: 5px;
+	padding: 0.4rem 1rem;
+	background: var(--light-blue);
+	border: solid 2px transparent;
+	transition: all 0.2s ease-in-out;
+}
+
+.add-book button:hover,
+.add-book button:focus {
+	background: var(--white);
+	color: var(--light-blue);
+	border: solid 2px var(--light-blue);
+}
+
+/* ## ADD BOOK FORM ##*/
+.modal-content {
+	border-radius: 5px;
+}
+
+#addBookForm .container {
+	width: 60vw;
+}
+
+#addBookForm .card {
+	padding: 2rem;
+}
+
+.cancel-btn {
+	background: transparent;
+	color: var(--light-blue);
+	border: none;
+}
+
+.cancel-btn:hover,
+.cancel-btn:focus {
+	color: var(--dark-blue);
+}
+
+.add-btn {
+	width: 8rem;
+	font-size: 1.1rem;
+	color: var(--cream);
+	background: var(--blue);
+	margin-left: 1rem;
+	border: solid 2px transparent;
+}
+
+.add-btn:hover,
+.add-btn:focus {
+	color: var(--blue);
+	background: var(--white);
+	border: solid 2px var(--blue);
+}
+
+/* #### SEARCH BOOK #### */
+.search-book .form-control {
+	width: 20.5rem;
+	margin-right: 0.4rem;
+	caret-color: var(--blue);
+	transition: all 0.2s ease;
+}
+
+.search-btn {
+	width: 4rem;
+	font-size: 1.1rem;
+	color: var(--cream);
+	background: var(--blue);
+	border: solid 2px transparent;
+}
+
+.search-btn:hover,
+.search-btn:focus {
+	color: var(--blue);
+	background: var(--white);
+	border: solid 2px var(--blue);
+}
+
+/* #### BOOKS LIST #### */
+.accordion h2 {
+	width: 25rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.unfinished-accordion-btn,
+.finished-accordion-btn {
+	font-size: 0.9rem;
+	color: var(--white);
+	background: var(--dark-blue);
+	border-radius: 100%;
+	padding: 0.3rem 0.4rem;
+	cursor: pointer;
+	border: solid 2px transparent;
+	transition: all 0.2s ease;
+}
+
+.unfinished-accordion-btn:hover,
+.finished-accordion-btn:hover {
+	color: var(--dark-blue);
+	background: var(--white);
+	border: solid 2px var(--dark-blue);
+}
+
+.books-list .card {
+	font-size: 1rem;
+	width: 25rem;
+	height: 100%;
+	text-transform: capitalize;
+}
+
+.books-list .title {
+	font-size: 1.7rem;
+	font-weight: bold;
+}
+
+.books-list .action {
+	margin-top: 3.2rem;
+}
+
+.books-list .action .btn {
+	width: 8rem;
+	height: 100%;
+}
+
+.finished-btn {
+	color: var(--white);
+	background: var(--light-green);
+	border: solid 2px transparent;
+	margin-right: 0.5rem;
+}
+
+.finished-btn:hover,
+.finished-btn:focus {
+	color: var(--light-green);
+	background: var(--white);
+	border: solid 2px var(--light-green);
+}
+
+.unfinished-btn {
+	color: var(--white);
+	background: var(--yellow);
+	border: solid 2px transparent;
+	margin-right: 0.5rem;
+}
+
+.unfinished-btn:hover,
+.unfinished-btn:focus {
+	color: var(--yellow);
+	background: var(--white);
+	border: solid 2px var(--yellow);
+}
+
+.remove-btn {
+	color: var(--white);
+	background: var(--red);
+	border: solid 2px transparent;
+}
+
+.remove-btn:hover,
+.remove-btn:focus {
+	color: var(--red);
+	background: var(--white);
+	border: solid 2px var(--red);
+}
+
+.cancel-btn.swal-btn {
+	margin-right: 1.2rem;
+}
+
+.finished-btn.swal-btn {
+	width: 5rem;
+}
+
+/* #### BACK TO TOP #### */
+.back-to-top {
+	position: fixed;
+	right: 3rem;
+	bottom: 3rem;
+}
+
+.back-to-top-btn {
+	cursor: pointer;
+	font-size: 1.2rem;
+	color: var(--white);
+	border-radius: 100%;
+	padding: 0.8rem 0.9rem;
+	background: var(--dark-blue);
+	border: solid 2px transparent;
+	transition: all 0.2s ease;
+}
+
+.back-to-top-btn:hover {
+	color: var(--dark-blue);
+	background: var(--white);
+	border: solid 2px var(--dark-blue);
+}
+
+.hidden {
+	display: none;
+}
+
+/* #### MEDIA QUERIES #### */
+@media screen and (max-width: 992px) {
+	.books-list .col-lg-6:nth-of-type(2) h2 {
+		margin-top: 2rem;
+	}
+}
+
+@media screen and (max-width: 800px) {
+	.add-book,
+	.search-book,
+	.books-list {
+		margin-left: 1rem;
+		margin-right: 1rem;
+	}
+
+	#searchForm input {
+		width: 100%;
+	}
+
+	.accordion h2 {
+		width: 100%;
+	}
+
+	.books-list .card {
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 570px) {
+	.navbar-brand {
+		padding-left: 1rem;
+	}
+
+	.back-to-top {
+		right: 1.5rem;
+		bottom: 1.5rem;
+	}
+
+	.back-to-top-btn {
+		font-size: 1.2rem;
+		padding: 0.7rem 0.8rem;
+	}
+}
+
+@media screen and (max-width: 300px) {
+	* {
+		font-size: 0.9rem;
+	}
+
+	.action .btn {
+		font-size: 0.8rem;
+	}
+
+	.back-to-top {
+		right: 1rem;
+		bottom: 1rem;
+	}
+
+	.back-to-top-btn {
+		font-size: 1rem;
+		padding: 0.6rem 0.7rem;
+	}
+}
