@@ -5,13 +5,13 @@ window.addEventListener('DOMContentLoaded', () => {
 		addBook();
 	});
 
-	const searchForm = document.getElementById('searchForm');
+	const searchForm = document.getElementById('search-form');
 	searchForm.addEventListener('submit', (event) => {
 		event.preventDefault();
 		searchBookByTitle();
 	});
 
-	const backToTopBtn = document.querySelector('.back-to-top-btn');
+	const backToTopBtn = document.querySelector('.back-to-top');
 	backToTopBtn.addEventListener('click', () => {
 		backToTop();
 	});

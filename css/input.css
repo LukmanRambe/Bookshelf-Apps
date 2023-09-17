@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;700;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: 'Rubik', sans-serif;
+	background: var(--white);
+}
+
+:root {
+	--white: #fdfdfd;
+	--light-blue: #4d7cce;
+	--blue: #325288;
+	--dark-blue: #223558;
+	--orange: #f5cebe;
+	--green: #114e60;
+	--light-green: #3ad86c;
+	--yellow: #d8cd3a;
+	--red: #d83a42;
+}
+
+@layer base {
+	a {
+		@apply no-underline;
+	}
+
+	button,
+	button[type='submit'] {
+		@apply min-h-max border-2 border-transparent rounded-md -bg--blue -text--white hover:-bg--white hover:-border--blue hover:-text--blue transition-all duration-[.2s] ease-in-out tracking-wide capitalize cursor-pointer;
+	}
+}
+
+@layer components {
+	.form-input {
+		@apply w-full px-3 py-2 border-gray-300 rounded-md outline-none border-2 focus:-border--light-blue -caret--blue transition-all duration-[.2s] ease-in-out;
+	}
+
+	.finished-btn {
+		@apply w-full px-5 py-2 -bg--light-green hover:-border--light-green hover:-text--light-green;
+	}
+
+	.unfinished-btn {
+		@apply w-full px-5 py-2 -bg--yellow hover:-text--yellow hover:-border--yellow;
+	}
+
+	.remove-btn {
+		@apply w-full px-5 py-2 -bg--red hover:-text--red hover:-border--red;
+	}
+
+	.cancel-btn {
+		@apply bg-transparent border-none -text--light-blue hover:-text--dark-blue;
+	}
+
+	.swal-actions {
+		@apply flex items-center justify-center gap-8 flex-nowrap w-fit !important;
+	}
+}
