@@ -19,3 +19,10 @@ All of the books data will be stored in our browser's local storage.
 ## Searched Book by Title
 
 ![Searched Book](https://user-images.githubusercontent.com/66102026/167974618-649649bd-b46a-45fa-94e2-c0b81745c88f.jpg)
+
+# How to run
+1. Install Dependencies
+`npm install`
+
+2. Type on terminal (to build tailwind)
+`npx tailwindcss -i ./css/input.css -o ./css/style.css --watch`
