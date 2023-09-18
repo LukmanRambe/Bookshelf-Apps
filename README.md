@@ -1,6 +1,6 @@
 # Bookshelf Apps
 
-This app is a submission for Dicoding "Belajar Membuat Front-End Web untuk Pemula" online course (https://www.dicoding.com/academies/315).
+This app is a submission for Dicoding [Belajar Membuat Front-End Web untuk Pemula](https://www.dicoding.com/academies/315) online course.
 
 We can store our books that we will read or have read and search the book by it's title, just like the real-world bookshelf. Recently added book will be stored in unfinished books list, we can move it to finished books list by clicking the finished button, vice versa. If we want, we can delete the book from the lists.
 
